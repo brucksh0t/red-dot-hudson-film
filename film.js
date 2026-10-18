@@ -112,6 +112,6 @@
 
   // ---------- later sections: the same motion as before (cards rise and settle) ----------
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){ST.refresh();});
-  addEventListener('load',function(){ST.refresh();});
+  if(document.readyState==='complete')ST.refresh();else addEventListener('load',function(){ST.refresh();});
   window.__rdFilm={films:function(){return films.map(function(f){return f.state();});},hero:function(){return hp.p;},started:function(){return started;},lite:lite};
 })();

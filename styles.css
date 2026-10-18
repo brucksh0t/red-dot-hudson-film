@@ -1,5 +1,3 @@
-@font-face{font-family:"Fraunces";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/fraunces-latin.woff2) format("woff2")}
-@font-face{font-family:"Fraunces";font-style:italic;font-weight:400 600;font-display:swap;src:url(fonts/fraunces-italic-latin.woff2) format("woff2")}
 @font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/instrument-sans-latin.woff2) format("woff2")}
 @font-face{font-family:"Big Shoulders Display";font-style:normal;font-weight:800 900;font-display:swap;src:url(fonts/big-shoulders-latin.woff2) format("woff2")}
 :root{--night:#141012;--yel:#ffd23f;--pink:#ff8a8f;--v1:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;--cream:#f5efe3;--paper:#fbf7ef;--ink:#1c1916;--mute:#6a6158;--red:#a8282a;--red2:#c53633;--gold:#e9b45c;--line:#d9cfbf;--bar:64px;
@@ -210,7 +208,7 @@ body.past .film__label--hero{opacity:0}
 .intro__t{font:900 clamp(4.2rem,13vw,9rem)/.85 var(--v1);text-transform:uppercase;margin:0;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.6)}
 .intro__t::after{content:"";display:inline-block;width:.42em;height:.42em;border-radius:50%;background:#d4232b;margin-left:.1em;vertical-align:.04em}
 .intro__small{display:block;font-size:.32em;letter-spacing:.06em;color:var(--pink)}
-.intro__s{font:italic 400 clamp(1.15rem,2.6vw,1.6rem)/1.3 var(--disp);margin:12px 0 16px;color:#efe6d6}
+.intro__s{font:400 clamp(1.1rem,2.4vw,1.45rem)/1.35 var(--sans);margin:12px 0 16px;color:#efe6d6}
 .intro__s i{color:var(--pink)}
 .card--intro .ctas{margin-top:14px}
 .film__hint{margin:18px 0 0;font:800 1rem/1 var(--v1);letter-spacing:.16em;text-transform:uppercase;color:#cbbfb3}
@@ -270,3 +268,4 @@ body.sheet-open{overflow:hidden}
 }
 @media (max-height:680px) and (max-width:899px){.intro__s{display:none}.intro__t{font-size:3.6rem}}
 @media(min-width:900px){#ch-bar{align-items:flex-start;padding-top:150px}#ch-bar .card{max-width:24rem}}
+.parties a.btn--lineLight{color:var(--cream)}.parties a.btn--lineLight:hover,.parties a.btn--lineLight:focus-visible{color:var(--ink)}
