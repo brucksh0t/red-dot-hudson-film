@@ -95,7 +95,7 @@
   G.fromTo('.film__shade',{opacity:0},{opacity:1,ease:'none',scrollTrigger:{trigger:'main',start:'top bottom',end:'top 20%',scrub:true}});
   // chapter cards (unchanged from the 3D build)
   G.utils.toArray('.ch .card:not(.card--intro)').forEach(function(c){G.fromTo(c,{autoAlpha:0,y:30},{autoAlpha:1,y:0,duration:.8,ease:'power2.out',scrollTrigger:{trigger:c,start:'top 85%',toggleActions:'play none none reverse'}});});
-  G.from('.card--intro > *',{autoAlpha:0,y:24,duration:1,stagger:.09,ease:'power3.out',delay:.15});
+  G.from('.card--intro > :not(h1)',{autoAlpha:0,y:24,duration:1,stagger:.09,ease:'power3.out',delay:.25});G.from('#intro-h',{y:18,duration:1.1,ease:'power3.out',delay:.1});
   // each chapter softly leaves before it reaches the top bar (the chapter wrapper fades, the card keeps its own entrance)
   G.utils.toArray('#track .ch:not(.ch--end)').forEach(function(ch){
     G.fromTo(ch,{opacity:1},{opacity:0,ease:'none',immediateRender:false,scrollTrigger:{trigger:ch.querySelector('.card'),start:'top 130px',end:'top 40px',scrub:true}});});

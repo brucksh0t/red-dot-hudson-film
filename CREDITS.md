@@ -22,7 +22,24 @@ The three party-space cards (garden, dance floor, screening room) are typographi
 - Winter Walk Dec 5: https://gossipsofrivertown.blogspot.com/2026/09/the-word-on-winter-walk.html (via community brief)
 - Reservation and party links: the existing request forms embedded on reddothudson.net/hudson-red-dot-restaurant-and-bar-reservations and ...-party
 
-## v4 "fresh" additions
-- img/logo-light.png: white version of the Red Dot wordmark, generated from img/logo.png (alpha preserved) for use on dark backgrounds only.
-- img/*.webp: re-encodes of the same photos at their native size (no upscaling).
-- Fonts: Fraunces and Instrument Sans (Google Fonts, OFL).
+## Film edition (v5 "red-dot-film")
+The Three.js opening of the v4 build is replaced by scroll-scrubbed film. Everything after it (menu, story, parties, reserve, visit, the panels/sheets, the soft rise of the page over the opening) is kept from v4.
+
+### Motion: illustrative, generated from Red Dot's photos, not filmed
+Every film carries the on-screen label "Illustrative motion generated from Red Dot’s photos, not filmed". The footage was made with image-to-video from Red Dot's own gallery photos, using crops of those photos as the first and last frames, then upscaled 2x with a commercial video upscaler. Small generated details (bottle labels, parallax) can differ from the real room.
+
+Only one photo of the place itself exists in Red Dot's gallery: the bar (`https://static.spotapps.co/spots/63/5f9b86b31749b09b43e5ff3283a00b/:original`, 1522x694). No photo of the exterior, the sign or Warren Street was found, so none is shown or generated: the film begins inside, on the real bar photo.
+
+| Film | Frames | Made from |
+|---|---|---|
+| frames/hero (top of page) | 150 | Clip 1: a slow truck right along the bar, first frame = left crop of the bar photo, last frame = right crop. Clip 2: a slow push to the BAR sign over the back bar, first frame = that same right crop, last frame = a crop around the BAR sign. The two clips meet on the same real frame. |
+| frames/frites (between Menu and Story) | 61 | Slow push in on the frites and fried-egg plate (gallery `spots/6b/d7ba0c532947debe063317f74c6696`), wide crop to a 1.3x crop. |
+| frames/brunch (between Parties and Reserve) | 61 | Slow push in on eggs Benedict (gallery `spots/79/3e16ef4cef4fe582ae876ba454ba24`), wide crop to a 1.3x crop. |
+
+Rejected clips: a single 10-second bar-to-sign move (the ceiling lamps doubled mid-clip), and a first frites clip (invented steam haze over the egg, exposure swing, fries morphing).
+
+Frame tiers: `x/` 2560x1440, `d/` 1920x1080, `m/` 1080x1440 (a true centre crop of the 2x frame, no resize). Each frame is AVIF at the lowest quality whose SSIM against the lossless master stays at or above 0.97 (0.965 for `x/`), with a quality floor, plus a WebP fallback. Light WebP previews (`dq/` 480x270, `mq/` 360x480, every 3rd frame) land first. The page picks the tier from the canvas size x devicePixelRatio (capped at 2); portrait screens get `m/`. Nothing in `frames/` is requested before the first scroll; films load within 2.5 screens; the canvas always draws the nearest loaded frame over the poster (frame 1). With Save-Data or a 2G connection only the posters show. With reduced motion, JavaScript off, or `?static=1`, the page is the full static page with the real bar photo, no film.
+
+- img/logo-light.png: the Red Dot wordmark with white letters (dot kept red), for dark backgrounds only.
+- Fonts (SIL Open Font License, Google Fonts), self-hosted latin subsets: Fraunces, Instrument Sans, Big Shoulders Display (v1's display face, used on the film hero).
+- GSAP 3 + ScrollTrigger, self-hosted in vendor/ (standard GSAP license).

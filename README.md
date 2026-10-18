@@ -1,4 +1,4 @@
-# Red Dot: an evening on Warren Street (concept)
+# Red Dot: film edition (concept)
 Unofficial concept preview. Not affiliated with Red Dot Restaurant & Bar.
-Scroll-driven Three.js scene with a full static page fallback (`?static=1`, reduced motion, or no WebGL). Preview hours with `?now=2026-10-16T18:00`.
-See CREDITS.md for sources. three.js (MIT) and GSAP are vendored in /vendor.
+The opening is a scroll-scrubbed film (canvas frame sequence, GSAP ScrollTrigger) made from Red Dot's own photos: illustrative motion, not filmed. Full static page: `?static=1`, reduced motion, or no JS. Preview hours with `?now=2026-10-16T18:00`. Posters only: `?lite`.
+See CREDITS.md for sources.
