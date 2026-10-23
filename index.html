@@ -8,35 +8,36 @@
 <meta name="theme-color" content="#141012">
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/avif" href="vid/bar-584.avif?v=1" media="(prefers-reduced-motion:no-preference)" fetchpriority="high">
+<link rel="preload" as="image" href="frames/hero/poster-m.webp?v=7" media="(prefers-reduced-motion:no-preference) and (max-width:599px)" fetchpriority="high">
+<link rel="preload" as="image" href="frames/hero/poster-d.webp?v=7" media="(prefers-reduced-motion:no-preference) and (min-width:600px)" fetchpriority="high">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/favicon.png">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <script>(function(){var q=new URLSearchParams(location.search),ok=false;try{ok=!!document.createElement('canvas').getContext('2d');}catch(e){}
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(ok&&!rm&&!q.has('static'))document.body.classList.add('exp');
 var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'')||q.has('lite'))document.body.classList.add('lite');})();</script>
-<script>(function(){var css='@font-face{font-family:"Fraunces";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/fraunces-latin.woff2) format("woff2")}@font-face{font-family:"Fraunces";font-style:italic;font-weight:400 600;font-display:swap;src:url(fonts/fraunces-italic-latin.woff2) format("woff2")}';function add(){if(add.d)return;add.d=1;var s=document.createElement("style");s.textContent=css;document.head.appendChild(s);}if(!document.body.classList.contains("exp")){add();return;}addEventListener("load",function(){(window.requestIdleCallback||setTimeout)(add,{timeout:1500});});["scroll","touchstart","keydown"].forEach(function(e){addEventListener(e,add,{once:true,passive:true});});})();</script>
-<noscript><style>@font-face{font-family:"Fraunces";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/fraunces-latin.woff2) format("woff2")}@font-face{font-family:"Fraunces";font-style:italic;font-weight:400 600;font-display:swap;src:url(fonts/fraunces-italic-latin.woff2) format("woff2")}</style></noscript>
+<script>(function(){var css='@font-face{font-family:"Fraunces";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/fraunces-latin.woff2) format("woff2")}';function add(){if(add.d)return;add.d=1;var s=document.createElement("style");s.textContent=css;document.head.appendChild(s);}if(!document.body.classList.contains("exp")){add();return;}addEventListener("load",function(){(window.requestIdleCallback||setTimeout)(add,{timeout:1500});});["scroll","touchstart","keydown"].forEach(function(e){addEventListener(e,add,{once:true,passive:true});});})();</script>
+<noscript><style>@font-face{font-family:"Fraunces";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/fraunces-latin.woff2) format("woff2")}</style></noscript>
 <aside class="flag-wrap" aria-label="Concept notice"><p class="flag">Concept preview · not affiliated with Red Dot</p></aside>
 
 <section class="exp-only" id="exp" aria-label="Opening: Red Dot’s bar">
   <div class="film film--hero">
-    <figure class="reel reel--hero" data-reel="bar-584" data-w="1280" data-h="584" role="img" aria-label="A slow camera move along Red Dot’s wooden bar, its yellow stools and the BAR sign over the back-bar shelves (a slow move across Red Dot’s own photo of the bar).">
-      <picture><source type="image/avif" srcset="vid/bar-584.avif?v=1"><source type="image/webp" srcset="vid/bar-584.webp?v=1"><img class="reel__p" src="vid/bar-584.jpg?v=1" width="1280" height="584" alt="" fetchpriority="high" decoding="async"></picture>
-      <video class="reel__v" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <figure class="reel reel--hero" data-film="hero" data-frames="90" data-tiers="m:390x694:(max-width:599px)|t:760x694:(orientation:portrait)|d:1100x600:all" role="img" aria-label="A camera move along Red Dot’s wooden bar: from the BAR sign and the back-bar bottles to the yellow stools and the flowers (frames cut from Red Dot’s own photo of the bar).">
+      <picture><source media="(max-width:599px)" srcset="frames/hero/poster-m.webp?v=7" width="390" height="694"><source media="(orientation:portrait)" srcset="frames/hero/poster-t.webp?v=7" width="760" height="694"><img class="film__poster" src="frames/hero/poster-d.webp?v=7" width="1100" height="600" alt="" fetchpriority="high" decoding="async"></picture>
+      <canvas class="film__cv" aria-hidden="true"></canvas>
     </figure>
   </div>
-  <p class="film__label film__label--hero">Photo: Red Dot · a slow move across their photo of the bar</p>
+  <p class="film__label film__label--hero">Photo: Red Dot</p>
   <div class="hud" id="hud">
     <div class="hud__top">
       <a class="hud__logo" href="#top-exp" aria-label="Red Dot, back to the start"><img src="img/logo-light.png" width="147" height="31" alt="Red Dot"></a>
       <button class="hud__chip" type="button" data-open="visit"><span class="pip" aria-hidden="true"></span><span data-chip-text>Tonight at Red Dot</span></button>
       <div class="hud__right">
-        <a class="icon-btn hud__static" href="?static=1">FULL PAGE</a>
-        <a class="btn btn--fill hud__reserve" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">RESERVE</a>
+        <a class="icon-btn hud__static" href="?static=1">Full page</a>
+        <a class="btn btn--line hud__reserve" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">Reserve</a>
       </div>
     </div>
     <div class="progress" aria-hidden="true"><span id="prog"></span></div>
@@ -50,7 +51,7 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
         <p class="intro__s">Restaurant <i>&amp;</i> Bar. Step in off Warren Street.</p>
         <button class="hud__chip intro__chip" type="button" data-open="visit"><span class="pip" aria-hidden="true"></span><span data-chip-text>Tonight at Red Dot</span></button>
         <div class="ctas">
-          <a class="btn btn--glow" href="#ch-sign">SCROLL IN</a>
+          <a class="btn btn--glow" href="#ch-sign">Scroll in</a>
         </div>
         <p class="film__hint" aria-hidden="true">Scroll to walk the bar</p>
       </div>
@@ -70,25 +71,25 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
       <h2 class="h2 split" id="bar-h">Pull up a yellow stool</h2>
       <p>The long wooden bar and the BAR sign over the bottles. Open the menu, tonight’s hours, a table or a party:</p>
       <div class="hots" role="group" aria-label="Inside Red Dot">
-        <button class="hot" type="button" data-open="menu">MENU</button>
-        <button class="hot" type="button" data-open="visit">HOURS TONIGHT</button>
-        <button class="hot" type="button" data-open="reserve">RESERVE</button>
-        <button class="hot" type="button" data-open="parties">PRIVATE PARTIES</button>
-        <button class="hot" type="button" data-open="visit">VISIT</button>
+        <button class="hot" type="button" data-open="menu">Menu</button>
+        <button class="hot" type="button" data-open="visit">Hours tonight</button>
+        <button class="hot" type="button" data-open="reserve">Reserve</button>
+        <button class="hot" type="button" data-open="parties">Private parties</button>
+        <button class="hot" type="button" data-open="visit">Visit</button>
       </div>
     </div></section>
     <section class="ch" id="ch-garden" aria-labelledby="garden-h"><div class="card card--r">
       <p class="intro__k">Chapter 4 · The spaces</p>
       <h2 class="h2 split" id="garden-h">The garden, the dance floor, the screening room</h2>
       <p>For fundraisers, Halloween parties, weddings and charity auctions.</p>
-      <div class="ctas"><button class="btn btn--glow" type="button" data-open="parties">SEE THE SPACES</button></div>
+      <div class="ctas"><button class="btn btn--glow" type="button" data-open="parties">See the spaces</button></div>
     </div></section>
     <div class="ch ch--end" aria-hidden="true"></div>
   </div>
 </section>
 
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-h" hidden>
-  <div class="sheet__in"><button class="closer" type="button" id="sheet-x">CLOSE</button><h2 class="sr" id="sheet-h">Details</h2><div id="sheet-body"></div></div>
+  <div class="sheet__in"><button class="closer" type="button" id="sheet-x">Close</button><h2 class="sr" id="sheet-h">Details</h2><div id="sheet-body"></div></div>
 </div>
 
 <header class="top">
@@ -97,7 +98,7 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
     <nav class="top__nav" aria-label="Main">
       <a href="#menu">Menu</a><a href="#story">Story</a><a href="#parties">Parties</a><a href="#visit">Visit</a>
     </nav>
-    <a class="btn btn--line top__cta" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">RESERVE</a>
+    <a class="btn btn--line top__cta" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">Reserve</a>
   </div>
 </header>
 
@@ -116,8 +117,8 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
       </div>
 
       <div class="ctas rv" style="--d:4">
-        <a class="btn btn--fill hero__reserve" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">RESERVE A TABLE</a>
-        <a class="btn btn--line" href="#menu">SEE THE MENU</a>
+        <a class="btn btn--fill hero__reserve" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">Reserve a table</a>
+        <a class="btn btn--line" href="#menu">See the menu</a>
       </div>
     </div>
 
@@ -193,21 +194,21 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
     </div>
     <p class="note">Prices as posted on Red Dot’s website, checked Oct 12, 2026. Specials (like Meatloaf Monday) change. Call to confirm.</p>
     <div class="ctas ctas--left">
-      <a class="btn btn--line" href="https://reddothudson.net/hudson-red-dot-restaurant-and-bar-food-menu" target="_blank" rel="noopener">FULL MENU</a>
-      <a class="btn btn--line" href="https://reddothudson.net/hudson-red-dot-restaurant-and-bar-drink-menu" target="_blank" rel="noopener">DRINK LIST</a>
+      <a class="btn btn--line" href="https://reddothudson.net/hudson-red-dot-restaurant-and-bar-food-menu" target="_blank" rel="noopener">Full menu</a>
+      <a class="btn btn--line" href="https://reddothudson.net/hudson-red-dot-restaurant-and-bar-drink-menu" target="_blank" rel="noopener">Drink list</a>
     </div>
   </div>
 </section>
 
 <section class="impact impact--word exp-only" id="frites-film" aria-labelledby="frites-h">
   <div class="impact__stage">
-    <figure class="reel reel--word" data-reel="frites" data-w="1920" data-h="1080" role="img" aria-label="Frites with a fried egg on ham and toast, on a red table (a slow move across a photo from Red Dot’s gallery).">
-      <picture><source type="image/avif" srcset="vid/frites-720.avif?v=1 1280w, vid/frites-1080.avif?v=1 1920w" sizes="(min-width:900px) 88vw, calc(100vw - 32px)"><source type="image/webp" srcset="vid/frites-720.webp?v=1 1280w, vid/frites-1080.webp?v=1 1920w" sizes="(min-width:900px) 88vw, calc(100vw - 32px)"><img class="reel__p" src="vid/frites-720.jpg?v=1" width="1280" height="720" alt="" loading="lazy" decoding="async"></picture>
-      <video class="reel__v" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <figure class="reel reel--word" data-film="frites" data-frames="72" data-tiers="m:560x1212:(orientation:portrait)|d:1600x900:all" role="img" aria-label="Frites with a fried egg on ham and toast, on a red table (frames cut from a photo in Red Dot’s gallery).">
+      <picture><source media="(orientation:portrait)" srcset="frames/frites/poster-m.webp?v=7" width="560" height="1212"><img class="film__poster" src="frames/frites/poster-d.webp?v=7" width="1600" height="900" alt="" loading="lazy" decoding="async"></picture>
+      <canvas class="film__cv" aria-hidden="true"></canvas>
       <svg class="word" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><mask id="word-m" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="900"><rect width="1600" height="900" fill="#fff"/><text class="word__t" x="800" y="610" text-anchor="middle">FRITES</text></mask></defs><text class="word__t word__probe" x="800" y="610" text-anchor="middle" opacity="0">FRITES</text><rect class="word__fill" width="1600" height="900" mask="url(#word-m)"/></svg>
     </figure>
     <div class="impact__cap"><p class="intro__k">From the Raymakers days</p><h2 class="h2 split" id="frites-h">Belgian frites, since 1999</h2><p>Red Dot opened as a frites, burgers and mussels bar. Frites still come with the burger.</p></div>
-    <p class="film__label">Photo: Red Dot · a slow move across their gallery photo</p>
+    <p class="film__label">Photo: Red Dot</p>
   </div>
 </section>
 
@@ -260,8 +261,8 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
         </div>
         <p class="spaces__note">Capacity for each space isn’t published. Call to confirm: <a href="tel:+15188283657">(518) 828-3657</a>.</p>
         <div class="ctas ctas--left">
-          <a class="btn btn--lineLight party__book" href="https://tmt.spotapps.co/private-parties?spot_id=149842" target="_blank" rel="noopener">BOOK A PARTY</a>
-          <a class="btn btn--lineLight" href="tel:+15188283657">CALL</a>
+          <a class="btn btn--lineLight party__book" href="https://tmt.spotapps.co/private-parties?spot_id=149842" target="_blank" rel="noopener">Book a party</a>
+          <a class="btn btn--lineLight" href="tel:+15188283657">Call</a>
         </div>
       </div>
     </div>
@@ -270,12 +271,12 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
 
 <section class="impact impact--open impact--r exp-only" id="brunch-film" aria-labelledby="brunch-h">
   <div class="impact__stage">
-    <figure class="reel reel--open" data-reel="brunch" data-w="1920" data-h="1080" role="img" aria-label="Eggs Benedict with roasted potatoes and onions, on a red table (a slow move across a photo from Red Dot’s gallery).">
-      <picture><source type="image/avif" srcset="vid/brunch-720.avif?v=1 1280w, vid/brunch-1080.avif?v=1 1920w" sizes="(min-width:900px) 88vw, calc(100vw - 32px)"><source type="image/webp" srcset="vid/brunch-720.webp?v=1 1280w, vid/brunch-1080.webp?v=1 1920w" sizes="(min-width:900px) 88vw, calc(100vw - 32px)"><img class="reel__p" src="vid/brunch-720.jpg?v=1" width="1280" height="720" alt="" loading="lazy" decoding="async"></picture>
-      <video class="reel__v" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <figure class="reel reel--open" data-film="brunch" data-frames="72" data-tiers="m:560x1212:(orientation:portrait)|d:1600x900:all" role="img" aria-label="Eggs Benedict with roasted potatoes and onions, on a red table (frames cut from a photo in Red Dot’s gallery).">
+      <picture><source media="(orientation:portrait)" srcset="frames/brunch/poster-m.webp?v=7" width="560" height="1212"><img class="film__poster" src="frames/brunch/poster-d.webp?v=7" width="1600" height="900" alt="" loading="lazy" decoding="async"></picture>
+      <canvas class="film__cv" aria-hidden="true"></canvas>
     </figure>
     <div class="impact__cap"><p class="intro__k">Saturday &amp; Sunday · 11 AM–3 PM</p><h2 class="h2 split" id="brunch-h">Weekend brunch</h2><p>Eggs Benedict, challah French toast, a croque monsieur. Brunch hours as posted. Call to confirm: <a href="tel:+15188283657">(518) 828-3657</a>.</p></div>
-    <p class="film__label">Photo: Red Dot · a slow move across their gallery photo</p>
+    <p class="film__label">Photo: Red Dot</p>
   </div>
 </section>
 
@@ -285,7 +286,7 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
     <h2 id="reserve-h" class="h2">Reserve at Red Dot</h2>
     <p class="lede">Send a request and Red Dot confirms. For tonight or a large group, call.</p>
     <p class="note">The request form’s time slots don’t match the posted hours exactly. Call to confirm brunch and late times.</p>
-    <div class="ctas ctas--left"><a class="btn btn--fill reserve__go" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">REQUEST A TABLE</a><a class="btn btn--line" href="tel:+15188283657">CALL</a></div>
+    <div class="ctas ctas--left"><a class="btn btn--fill reserve__go" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">Request a table</a><a class="btn btn--line" href="tel:+15188283657">Call</a></div>
   </div>
 </section>
 
@@ -297,7 +298,7 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
       <p><a class="tel" href="tel:+15188283657">(518) 828-3657</a></p>
       <p class="note">Pickup: no online ordering. Call ahead.</p>
       <div class="ctas ctas--left">
-        <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar%2C%20321%20Warren%20St%2C%20Hudson%2C%20NY%2012534" target="_blank" rel="noopener">DIRECTIONS</a>
+        <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar%2C%20321%20Warren%20St%2C%20Hudson%2C%20NY%2012534" target="_blank" rel="noopener">Directions</a>
       </div>
     </div>
     <div>
@@ -324,15 +325,15 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
   <div class="wrap foot__in">
     <img src="img/logo-light.png" width="147" height="31" alt="Red Dot">
     <p><a href="https://www.instagram.com/reddothudson" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/310465430424" target="_blank" rel="noopener">Facebook</a> · <a href="https://reddothudson.net/" target="_blank" rel="noopener">Current site</a></p>
-    <p>Concept redesign preview. Not affiliated with Red Dot Restaurant &amp; Bar. Photos from Red Dot’s own website gallery. The moving clips are slow camera moves across those photos, not filmed video.</p>
+    <p>Concept redesign preview. Not affiliated with Red Dot Restaurant &amp; Bar. Photos from Red Dot’s own website gallery. The moving scenes are camera moves cut frame by frame from those photos, not filmed video.</p>
   </div>
 </footer>
 
 <nav class="mbar" aria-label="Quick actions">
-  <a href="tel:+15188283657">CALL</a><a href="#menu">MENU</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar%2C%20321%20Warren%20St%2C%20Hudson%2C%20NY%2012534" target="_blank" rel="noopener">MAP</a><a class="mbar__res" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">RESERVE</a>
+  <a href="tel:+15188283657">Call</a><a href="#menu">Menu</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar%2C%20321%20Warren%20St%2C%20Hudson%2C%20NY%2012534" target="_blank" rel="noopener">Map</a><a class="mbar__res" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">Reserve</a>
 </nav>
 <script src="main.js?v=1"></script>
-<script>(function(){function go(){["vendor/gsap.min.js","vendor/ScrollTrigger.min.js","scene.js?v=2"].forEach(function(u){var s=document.createElement("script");s.src=u;s.async=false;document.body.appendChild(s);});}
+<script>(function(){function go(){["vendor/gsap.min.js","vendor/ScrollTrigger.min.js","scene.js?v=3"].forEach(function(u){var s=document.createElement("script");s.src=u;s.async=false;document.body.appendChild(s);});}
 if(document.readyState==="complete")go();else addEventListener("load",go);})();</script>
 </body>
 </html>

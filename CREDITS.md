@@ -22,19 +22,17 @@ The three party-space cards (garden, dance floor, screening room) are typographi
 - Winter Walk Dec 5: https://gossipsofrivertown.blogspot.com/2026/09/the-word-on-winter-walk.html (via community brief)
 - Reservation and party links: the existing request forms embedded on reddothudson.net/hudson-red-dot-restaurant-and-bar-reservations and ...-party
 
-## Scene edition (v5 "red-dot-film", Oct 23 rework)
-The Three.js opening of v4 and the generated films are gone. The opening and two pinned scenes use **slow camera moves across Red Dot's own full-resolution photos** (pan / Ken Burns only), built frame by frame with every output pixel drawn from at least one source pixel (no upscaling), then encoded as H.264 MP4 and VP9 WebM with a poster (AVIF/WebP/JPG). Each moving section carries the label "Photo: Red Dot · a slow move across their photo".
+## Film edition (v5 "red-dot-film", r7, Oct 23 2026)
+The opening and two pinned scenes are **scroll-scrubbed frame films** cut from Red Dot's own full-size photos: each scroll position maps to exactly one frame (canvas engine from e40d5d9: micro ladder, previews, sharp frames near the reader, nothing requested before the first scroll). Every frame is a real camera move over the photo (push-in, truck, pan) rendered with Lanczos from a source window at least as large as the frame, so no output pixel is upscaled (build script: `build-frames.py`). Frames are drawn 1:1 into a canvas the size of the frame and never shown wider than the frame in CSS px. Where the photo is smaller than the screen (the bar), the frame is shown at its own size on a solid red field. Each moving section is labelled "Photo: Red Dot".
 
-| Clip | Size | Source (Red Dot gallery, `:original`) | Move |
+| Film | Tiers (frame px) | Source (Red Dot gallery, `:original`) | Move |
 |---|---|---|---|
-| vid/bar-584 | 1280x584 | the bar, `spots/63/5f9b86b31749b09b43e5ff3283a00b` (1522x694) | a slow truck right along the bar (window 1400→1400 px of 1522) |
-| vid/frites-1080, -720 | 1920x1080, 1280x720 | frites and fried egg, `spots/6b/d7ba0c532947debe063317f74c6696` (2000x1331) | slow push and drift |
-| vid/brunch-1080, -720 | 1920x1080, 1280x720 | eggs Benedict, `spots/79/3e16ef4cef4fe582ae876ba454ba24` (2000x1331) | slow push and drift |
+| frames/hero (90 frames) | m 390x694, t 760x694, d 1100x600 | the bar, `spots/63/5f9b86b31749b09b43e5ff3283a00b` (1522x694) | m/t: lateral truck along the bar at 1.0 source px per frame px; d: push-in 1.16x while trucking right |
+| frames/frites (72) | m 560x1212, d 1600x900 | frites and fried egg, `spots/6b/d7ba0c532947debe063317f74c6696` (2000x1331) | push-in and pan |
+| frames/brunch (72) | m 560x1212, d 1600x900 | eggs Benedict, `spots/79/3e16ef4cef4fe582ae876ba454ba24` (2000x1331) | pan and push-in |
 
-Each clip plays its move forward and back, so the loop has no jump. The bar photo is too small to fill a screen, so it is shown smaller, in a crisp frame. Every reel is capped at its clip width divided by devicePixelRatio, so it is never shown above 1.0x. Build script: /workspace/rd6/kb.py.
-
-Design rules for this edition: no gradients, feathered edges, vignettes or blurred fills; sections change with hard-edged masked wipes; headings rise word by word through a line mask; the frites scene cuts the word FRITES out of solid red and scrolling drives through the I. Reduced motion, `?static=1` and JavaScript-off get the static page with stills.
+Design rules: no gradients or faded edges behind titles; type over film sits on crisp solid backings; sections change with hard-edged masked wipes; headings rise word by word; the frites scene cuts FRITES out of solid red (two lines on portrait screens) and scrolling drives through the I. Reduced motion, `?static=1` and JavaScript-off get the static page with stills; Save-Data/2G get posters only (no frames).
 
 - img/logo-light.png: the Red Dot wordmark with white letters (dot kept red), for dark backgrounds only.
-- Fonts (SIL Open Font License, Google Fonts), self-hosted latin subsets: Fraunces (display) and Instrument Sans (text). Two families only.
+- Fonts (SIL Open Font License, Google Fonts), self-hosted latin subsets: Fraunces (display, 400 and 700 only, no italic) and Instrument Sans (text and buttons). Two families only.
 - GSAP 3 + ScrollTrigger, self-hosted in vendor/ (standard GSAP license).
