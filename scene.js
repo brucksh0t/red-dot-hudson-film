@@ -46,7 +46,7 @@
       ST.create({trigger:card,start:'top 82%',onEnter:function(){tl.play();},onLeaveBack:function(){tl.reverse();}});}
     else{reveal(card).play();}
     // exit: wipe upward (a hard mask edge on the chapter wrapper, so it never fights the card's entrance), scrubbed so it reverses exactly
-    ST.create({trigger:card,start:function(){return 'top '+(desk.matches?130:Math.round(reelH.getBoundingClientRect().bottom+20))+'px';},end:function(){return 'top '+(desk.matches?20:Math.round(reelH.getBoundingClientRect().bottom-80))+'px';},
+    ST.create({trigger:card,start:function(){return 'top '+(desk.matches?130:Math.round(Math.min(reelH.getBoundingClientRect().bottom+20,card.getBoundingClientRect().top-2)))+'px';},end:function(){return 'top '+(desk.matches?20:Math.round(reelH.getBoundingClientRect().bottom-80))+'px';},
       onUpdate:function(s){var off=card.getBoundingClientRect().top-ch.getBoundingClientRect().top;ch.style.clipPath=s.progress>0?'inset('+Math.round(off+s.progress*card.offsetHeight)+'px 0 0 0)':'';},onLeaveBack:function(){ch.style.clipPath='';}});
     // desktop: the reel slides to the side opposite the card (scrubbed with the chapter)
     if(desk.matches&&card.classList.contains('card--r'))G.to(reelH,{x:function(){var r=reelH.getBoundingClientRect();return -(r.left-Math.max(24,(innerWidth-1240)/2));},ease:'power2.inOut',
