@@ -18,8 +18,8 @@ def one(a):
     assert b[2]-b[0]>=W-.01 and b[3]-b[1]>=H-.01 and b[0]>=0 and b[1]>=0 and b[2]<=im.width and b[3]<=im.height,(name,tier,k,b)
     f=im.resize((W,H),Image.LANCZOS,box=b);s='%03d'%(k+1);d=O+name+'/'
     f.save(d+tier+'/'+s+'.webp',quality=74,method=5)
-    if k%3==0 or k==n-1:f.save(d+tier+'q/'+s+'.webp',quality=30,method=5)
-    if k%6==0 or k==n-1:f.save(d+tier+'t/'+s+'.webp',quality=6,method=5)
+    if k%2==0 or k==n-1:f.save(d+tier+'q/'+s+'.webp',quality=30,method=5)
+    if k%3==0 or k==n-1:f.save(d+tier+'t/'+s+'.webp',quality=6,method=5)
     return (b[2]-b[0])/W
 if __name__=='__main__':
     if os.path.exists(O):shutil.rmtree(O)

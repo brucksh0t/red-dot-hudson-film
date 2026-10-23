@@ -9,14 +9,14 @@
   // ---------- scrubbed films: frame sequences cut from Red Dot's own photos, drawn on a canvas at the frame's own size ----------
   // Engine from e40d5d9 (micro ladder -> previews -> sharp frames near the reader, look-ahead, stale-request drop, nothing before the first scroll).
   // Every tier is drawn 1:1 into a canvas whose backing store is the frame size; CSS never shows it wider than the frame (<=1.0x).
-  var FV='7',STEP=3;
+  var FV='8',STEP=2;
   function Film(el){this.el=el;this.name=el.dataset.film;this.n=+el.dataset.frames;this.tiers=el.dataset.tiers.split('|').map(function(x){var p=x.split(':');return {k:p[0],w:+p[1].split('x')[0],h:+p[1].split('x')[1],mq:matchMedia(p.slice(2).join(':'))};});
     this.box=el.closest('.impact')||document.getElementById('track');this.cv=el.querySelector('canvas');this.ctx=this.cv.getContext('2d');this.poster=el.querySelector('.film__poster');
     this.cur=0;this.dir=1;this.set=null;this.gen=0;this.reset();this.size();}
   var F=Film.prototype;
   F.reset=function(){var n=this.n;this.gen++;this.full=new Array(n);this.lq=new Array(n);this.tq=new Array(n);this.ok=new Uint8Array(n);this.lok=new Uint8Array(n);this.tok=new Uint8Array(n);
     this.req=new Uint8Array(n);this.lreq=new Uint8Array(n);this.treq=new Uint8Array(n);this.inflight={};this.drawn=-1;this.drawnQ='';};
-  F.isL=function(i){return i%STEP===0||i===this.n-1;};F.isT=function(i){return i%6===0||i===this.n-1;};
+  F.isL=function(i){return i%STEP===0||i===this.n-1;};F.isT=function(i){return i%3===0||i===this.n-1;};
   F.src=function(i,lq){var s=String(i+1);while(s.length<3)s='0'+s;return 'frames/'+this.name+'/'+this.set+(lq===2?'t':lq?'q':'')+'/'+s+'.webp?v='+FV;};
   F.size=function(){var T=this.tiers.filter(function(x){return x.mq.matches;})[0]||this.tiers[this.tiers.length-1],t=T.k;if(t===this.set)return;var had=this.set;this.set=t;this.cv.width=T.w;this.cv.height=T.h;this.el.dataset.tier=t;
     this.ctx.imageSmoothingEnabled=false;if(had){this.reset();pump();}this.seed();};
