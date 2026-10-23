@@ -199,7 +199,7 @@ body.past .film__label--hero{opacity:0}
 .ch{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:120px 20px 80px;max-width:1240px;margin:0 auto}
 .ch--end{min-height:60vh}
 .card{max-width:30rem;padding:26px 28px;background:rgba(14,11,10,.76);backdrop-filter:blur(10px);border:1px solid rgba(245,239,227,.16);color:var(--cream)}
-#exp .card .h2{color:#fff;font:900 clamp(2.4rem,5vw,3.8rem)/.95 var(--v1);text-transform:uppercase;letter-spacing:.01em}
+#exp .card .h2{color:#fff;font:800 clamp(2.2rem,4.4vw,3.4rem)/1.02 var(--v1);letter-spacing:0;text-wrap:balance}
 .card p{margin:0 0 6px}
 .card--r{margin-left:auto}
 .ch--intro{align-items:flex-end;padding-bottom:56px}
@@ -232,7 +232,7 @@ body.past .progress{display:none}
 .impact__veil--bot{bottom:0;height:60%;background:linear-gradient(to top,var(--below),transparent);opacity:0}
 .impact__cap{position:absolute;z-index:3;left:max(20px,calc((100% - 1200px)/2));top:50%;transform:translateY(-50%);max-width:26rem;padding:24px 26px;background:rgba(14,11,10,.76);backdrop-filter:blur(10px);border:1px solid rgba(245,239,227,.16);color:var(--cream)}
 .impact--r .impact__cap{left:auto;right:max(20px,calc((100% - 1200px)/2))}
-.impact__cap .h2{color:#fff;font:900 clamp(2.4rem,5vw,3.6rem)/.95 var(--v1);text-transform:uppercase}
+.impact__cap .h2{color:#fff;font:800 clamp(2.2rem,4.4vw,3.3rem)/1.02 var(--v1);letter-spacing:0;text-wrap:balance}
 .impact__cap p{margin:0}
 .impact__cap a{color:var(--gold)}
 .impact .film__label{position:absolute;z-index:3}
@@ -269,3 +269,7 @@ body.sheet-open{overflow:hidden}
 @media (max-height:680px) and (max-width:899px){.intro__s{display:none}.intro__t{font-size:3.6rem}}
 @media(min-width:900px){#ch-bar{align-items:flex-start;padding-top:150px}#ch-bar .card{max-width:24rem}}
 .parties a.btn--lineLight{color:var(--cream)}.parties a.btn--lineLight:hover,.parties a.btn--lineLight:focus-visible{color:var(--ink)}
+
+/* dip overlay: an impact stage that has no image yet stays dark and fades up (no pop from blank) */
+.film__dip{position:absolute;inset:0;background:#0c0908;opacity:1;pointer-events:none}
+.film--hero .film__dip{opacity:0}
