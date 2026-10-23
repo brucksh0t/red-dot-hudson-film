@@ -273,3 +273,8 @@ body.sheet-open{overflow:hidden}
 /* dip overlay: an impact stage that has no image yet stays dark and fades up (no pop from blank) */
 .film__dip{position:absolute;inset:0;background:#0c0908;opacity:1;pointer-events:none}
 .film--hero .film__dip{opacity:0}
+/* round 5: the garden headline holds to two lines; the intro clears the film label (mobile) and the fold (desktop) */
+#exp #ch-garden .card{max-width:36rem}
+#exp #garden-h{font-size:clamp(1.75rem,3.2vw,2.75rem)}
+@media(min-width:900px){.ch.ch--intro{padding-top:96px;padding-bottom:136px}.intro__t{font-size:clamp(4.2rem,min(13vw,12vh),9rem)}}
+@media(max-width:899px){.ch.ch--intro{padding-bottom:calc(var(--bar) + 124px)}}
