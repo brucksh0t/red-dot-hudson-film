@@ -6,13 +6,12 @@
 <title>Red Dot Restaurant &amp; Bar · 321 Warren St, Hudson, NY</title>
 <meta name="description" content="Red Dot Restaurant &amp; Bar on Warren Street in Hudson, NY, since Bastille Day 1999. Dinner Friday to Tuesday, weekend brunch, a garden with an outdoor fire, a dance floor and a screening room for private parties.">
 <meta name="theme-color" content="#141012">
-<link rel="preload" href="fonts/big-shoulders-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/avif" href="frames/hero/m/001.avif?v=2" media="(orientation:portrait) and (prefers-reduced-motion:no-preference)" fetchpriority="high">
-<link rel="preload" as="image" type="image/avif" href="frames/hero/d/001.avif?v=2" media="(orientation:landscape) and (prefers-reduced-motion:no-preference)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="vid/bar-584.avif?v=1" media="(prefers-reduced-motion:no-preference)" fetchpriority="high">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/favicon.png">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -23,14 +22,14 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
 <noscript><style>@font-face{font-family:"Fraunces";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/fraunces-latin.woff2) format("woff2")}@font-face{font-family:"Fraunces";font-style:italic;font-weight:400 600;font-display:swap;src:url(fonts/fraunces-italic-latin.woff2) format("woff2")}</style></noscript>
 <aside class="flag-wrap" aria-label="Concept notice"><p class="flag">Concept preview · not affiliated with Red Dot</p></aside>
 
-<section class="exp-only" id="exp" aria-label="Opening film: Red Dot’s bar">
-  <div class="film film--hero" data-film="hero" data-frames="150" role="img" aria-label="A slow camera move along Red Dot’s wooden bar and its yellow stools, toward the BAR sign above the back-bar shelves (illustrative motion generated from Red Dot’s photo of the bar).">
-    <picture><source media="(orientation:portrait)" type="image/avif" srcset="frames/hero/m/001.avif?v=2" width="1080" height="1440"><source media="(orientation:portrait)" srcset="frames/hero/m/001.webp?v=2" width="1080" height="1440"><source type="image/avif" srcset="frames/hero/d/001.avif?v=2" width="1920" height="1080"><img class="film__poster" src="frames/hero/d/001.webp?v=2" width="1920" height="1080" alt="" fetchpriority="high" decoding="async"></picture>
-    <canvas class="film__cv"></canvas>
-    <div class="film__veil" aria-hidden="true"></div>
-    <div class="film__shade" aria-hidden="true"></div>
+<section class="exp-only" id="exp" aria-label="Opening: Red Dot’s bar">
+  <div class="film film--hero">
+    <figure class="reel reel--hero" data-reel="bar-584" data-w="1280" data-h="584" role="img" aria-label="A slow camera move along Red Dot’s wooden bar, its yellow stools and the BAR sign over the back-bar shelves (a slow move across Red Dot’s own photo of the bar).">
+      <picture><source type="image/avif" srcset="vid/bar-584.avif?v=1"><source type="image/webp" srcset="vid/bar-584.webp?v=1"><img class="reel__p" src="vid/bar-584.jpg?v=1" width="1280" height="584" alt="" fetchpriority="high" decoding="async"></picture>
+      <video class="reel__v" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    </figure>
   </div>
-  <p class="film__label film__label--hero">Illustrative motion generated from Red Dot’s photos, not filmed</p>
+  <p class="film__label film__label--hero">Photo: Red Dot · a slow move across their photo of the bar</p>
   <div class="hud" id="hud">
     <div class="hud__top">
       <a class="hud__logo" href="#top-exp" aria-label="Red Dot, back to the start"><img src="img/logo-light.png" width="147" height="31" alt="Red Dot"></a>
@@ -58,17 +57,17 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
     </section>
     <section class="ch" id="ch-sign" aria-labelledby="sign-h"><div class="card">
       <p class="intro__k">Chapter 1 · The name</p>
-      <h2 class="h2" id="sign-h">Look for the red dot</h2>
+      <h2 class="h2 split" id="sign-h">Look for the red dot</h2>
       <p>A regular’s directions stuck: look for the red dot on the sign. The name has stayed on Warren Street ever since.</p>
     </div></section>
     <section class="ch" id="ch-door" aria-labelledby="door-h"><div class="card card--r">
       <p class="intro__k">Chapter 2 · Since Bastille Day 1999</p>
-      <h2 class="h2" id="door-h">It began as Raymakers</h2>
+      <h2 class="h2 split" id="door-h">It began as Raymakers</h2>
       <p>A Belgian frites, burgers and mussels bar. In 2002 Red Dot took over the building next door and added a dance floor, a screening room and a garden with an outdoor fire.</p>
     </div></section>
     <section class="ch" id="ch-bar" aria-labelledby="bar-h"><div class="card">
       <p class="intro__k">Chapter 3 · Inside</p>
-      <h2 class="h2" id="bar-h">Pull up a yellow stool</h2>
+      <h2 class="h2 split" id="bar-h">Pull up a yellow stool</h2>
       <p>The long wooden bar and the BAR sign over the bottles. Open the menu, tonight’s hours, a table or a party:</p>
       <div class="hots" role="group" aria-label="Inside Red Dot">
         <button class="hot" type="button" data-open="menu">MENU</button>
@@ -80,7 +79,7 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
     </div></section>
     <section class="ch" id="ch-garden" aria-labelledby="garden-h"><div class="card card--r">
       <p class="intro__k">Chapter 4 · The spaces</p>
-      <h2 class="h2" id="garden-h">The garden, the dance floor, the screening room</h2>
+      <h2 class="h2 split" id="garden-h">The garden, the dance floor, the screening room</h2>
       <p>For fundraisers, Halloween parties, weddings and charity auctions.</p>
       <div class="ctas"><button class="btn btn--glow" type="button" data-open="parties">SEE THE SPACES</button></div>
     </div></section>
@@ -200,15 +199,15 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
   </div>
 </section>
 
-<section class="impact exp-only" id="frites-film" data-film="frites" data-frames="61" aria-labelledby="frites-h" style="--above:var(--cream);--below:var(--paper)">
+<section class="impact impact--word exp-only" id="frites-film" aria-labelledby="frites-h">
   <div class="impact__stage">
-    <div class="impact__media" role="img" aria-label="A slow push in on a plate of frites and a fried egg on ham and toast, on a red table (illustrative motion generated from a photo in Red Dot’s gallery).">
-      <picture><source media="(orientation:portrait)" type="image/avif" srcset="frames/frites/m/001.avif?v=2" width="1080" height="1440"><source media="(orientation:portrait)" srcset="frames/frites/m/001.webp?v=2" width="1080" height="1440"><source type="image/avif" srcset="frames/frites/d/001.avif?v=2" width="1920" height="1080"><img class="film__poster" src="frames/frites/d/001.webp?v=2" width="1920" height="1080" alt="" loading="lazy" decoding="async"></picture>
-      <canvas class="film__cv"></canvas>
-    </div>
-    <div class="impact__veil impact__veil--top" aria-hidden="true"></div><div class="impact__veil impact__veil--bot" aria-hidden="true"></div>
-    <div class="impact__cap"><p class="intro__k">From the Raymakers days</p><h2 class="h2" id="frites-h">Belgian frites, since 1999</h2><p>Red Dot opened as a frites, burgers and mussels bar. Frites still come with the burger.</p></div>
-    <p class="film__label">Illustrative motion generated from Red Dot’s photos, not filmed</p>
+    <figure class="reel reel--word" data-reel="frites" data-w="1920" data-h="1080" role="img" aria-label="Frites with a fried egg on ham and toast, on a red table (a slow move across a photo from Red Dot’s gallery).">
+      <picture><source type="image/avif" srcset="vid/frites-720.avif?v=1 1280w, vid/frites-1080.avif?v=1 1920w" sizes="(min-width:900px) 88vw, calc(100vw - 32px)"><source type="image/webp" srcset="vid/frites-720.webp?v=1 1280w, vid/frites-1080.webp?v=1 1920w" sizes="(min-width:900px) 88vw, calc(100vw - 32px)"><img class="reel__p" src="vid/frites-720.jpg?v=1" width="1280" height="720" alt="" loading="lazy" decoding="async"></picture>
+      <video class="reel__v" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+      <svg class="word" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><mask id="word-m" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="900"><rect width="1600" height="900" fill="#fff"/><text class="word__t" x="800" y="610" text-anchor="middle">FRITES</text></mask></defs><text class="word__t word__probe" x="800" y="610" text-anchor="middle" opacity="0">FRITES</text><rect class="word__fill" width="1600" height="900" mask="url(#word-m)"/></svg>
+    </figure>
+    <div class="impact__cap"><p class="intro__k">From the Raymakers days</p><h2 class="h2 split" id="frites-h">Belgian frites, since 1999</h2><p>Red Dot opened as a frites, burgers and mussels bar. Frites still come with the burger.</p></div>
+    <p class="film__label">Photo: Red Dot · a slow move across their gallery photo</p>
   </div>
 </section>
 
@@ -269,15 +268,14 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
   </div>
 </section>
 
-<section class="impact exp-only impact--r" id="brunch-film" data-film="brunch" data-frames="61" aria-labelledby="brunch-h" style="--above:var(--ink);--below:var(--paper)">
+<section class="impact impact--open impact--r exp-only" id="brunch-film" aria-labelledby="brunch-h">
   <div class="impact__stage">
-    <div class="impact__media" role="img" aria-label="A slow push in on eggs Benedict with roasted potatoes and onions, on a red table (illustrative motion generated from a photo in Red Dot’s gallery).">
-      <picture><source media="(orientation:portrait)" type="image/avif" srcset="frames/brunch/m/001.avif?v=2" width="1080" height="1440"><source media="(orientation:portrait)" srcset="frames/brunch/m/001.webp?v=2" width="1080" height="1440"><source type="image/avif" srcset="frames/brunch/d/001.avif?v=2" width="1920" height="1080"><img class="film__poster" src="frames/brunch/d/001.webp?v=2" width="1920" height="1080" alt="" loading="lazy" decoding="async"></picture>
-      <canvas class="film__cv"></canvas>
-    </div>
-    <div class="impact__veil impact__veil--top" aria-hidden="true"></div><div class="impact__veil impact__veil--bot" aria-hidden="true"></div>
-    <div class="impact__cap"><p class="intro__k">Saturday &amp; Sunday · 11 AM–3 PM</p><h2 class="h2" id="brunch-h">Weekend brunch</h2><p>Eggs Benedict, challah French toast, a croque monsieur. Brunch hours as posted. Call to confirm: <a href="tel:+15188283657">(518) 828-3657</a>.</p></div>
-    <p class="film__label">Illustrative motion generated from Red Dot’s photos, not filmed</p>
+    <figure class="reel reel--open" data-reel="brunch" data-w="1920" data-h="1080" role="img" aria-label="Eggs Benedict with roasted potatoes and onions, on a red table (a slow move across a photo from Red Dot’s gallery).">
+      <picture><source type="image/avif" srcset="vid/brunch-720.avif?v=1 1280w, vid/brunch-1080.avif?v=1 1920w" sizes="(min-width:900px) 88vw, calc(100vw - 32px)"><source type="image/webp" srcset="vid/brunch-720.webp?v=1 1280w, vid/brunch-1080.webp?v=1 1920w" sizes="(min-width:900px) 88vw, calc(100vw - 32px)"><img class="reel__p" src="vid/brunch-720.jpg?v=1" width="1280" height="720" alt="" loading="lazy" decoding="async"></picture>
+      <video class="reel__v" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    </figure>
+    <div class="impact__cap"><p class="intro__k">Saturday &amp; Sunday · 11 AM–3 PM</p><h2 class="h2 split" id="brunch-h">Weekend brunch</h2><p>Eggs Benedict, challah French toast, a croque monsieur. Brunch hours as posted. Call to confirm: <a href="tel:+15188283657">(518) 828-3657</a>.</p></div>
+    <p class="film__label">Photo: Red Dot · a slow move across their gallery photo</p>
   </div>
 </section>
 
@@ -326,7 +324,7 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
   <div class="wrap foot__in">
     <img src="img/logo-light.png" width="147" height="31" alt="Red Dot">
     <p><a href="https://www.instagram.com/reddothudson" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/310465430424" target="_blank" rel="noopener">Facebook</a> · <a href="https://reddothudson.net/" target="_blank" rel="noopener">Current site</a></p>
-    <p>Concept redesign preview. Not affiliated with Red Dot Restaurant &amp; Bar. Photos from Red Dot’s own website gallery. The moving footage is illustrative motion generated from those photos, not filmed.</p>
+    <p>Concept redesign preview. Not affiliated with Red Dot Restaurant &amp; Bar. Photos from Red Dot’s own website gallery. The moving clips are slow camera moves across those photos, not filmed video.</p>
   </div>
 </footer>
 
@@ -334,7 +332,7 @@ var c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'
   <a href="tel:+15188283657">CALL</a><a href="#menu">MENU</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Red%20Dot%20Restaurant%20%26%20Bar%2C%20321%20Warren%20St%2C%20Hudson%2C%20NY%2012534" target="_blank" rel="noopener">MAP</a><a class="mbar__res" href="https://tmt.spotapps.co/reservations?spot_id=149842" target="_blank" rel="noopener">RESERVE</a>
 </nav>
 <script src="main.js?v=1"></script>
-<script>(function(){function go(){["vendor/gsap.min.js","vendor/ScrollTrigger.min.js","film.js?v=5"].forEach(function(u){var s=document.createElement("script");s.src=u;s.async=false;document.body.appendChild(s);});}
+<script>(function(){function go(){["vendor/gsap.min.js","vendor/ScrollTrigger.min.js","scene.js?v=2"].forEach(function(u){var s=document.createElement("script");s.src=u;s.async=false;document.body.appendChild(s);});}
 if(document.readyState==="complete")go();else addEventListener("load",go);})();</script>
 </body>
 </html>

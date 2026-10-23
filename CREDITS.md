@@ -22,24 +22,19 @@ The three party-space cards (garden, dance floor, screening room) are typographi
 - Winter Walk Dec 5: https://gossipsofrivertown.blogspot.com/2026/09/the-word-on-winter-walk.html (via community brief)
 - Reservation and party links: the existing request forms embedded on reddothudson.net/hudson-red-dot-restaurant-and-bar-reservations and ...-party
 
-## Film edition (v5 "red-dot-film")
-The Three.js opening of the v4 build is replaced by scroll-scrubbed film. Everything after it (menu, story, parties, reserve, visit, the panels/sheets, the soft rise of the page over the opening) is kept from v4.
+## Scene edition (v5 "red-dot-film", Oct 23 rework)
+The Three.js opening of v4 and the generated films are gone. The opening and two pinned scenes use **slow camera moves across Red Dot's own full-resolution photos** (pan / Ken Burns only), built frame by frame with every output pixel drawn from at least one source pixel (no upscaling), then encoded as H.264 MP4 and VP9 WebM with a poster (AVIF/WebP/JPG). Each moving section carries the label "Photo: Red Dot · a slow move across their photo".
 
-### Motion: illustrative, generated from Red Dot's photos, not filmed
-Every film carries the on-screen label "Illustrative motion generated from Red Dot’s photos, not filmed". The footage was made with image-to-video from Red Dot's own gallery photos, using crops of those photos as the first and last frames, then upscaled 2x with a commercial video upscaler. Small generated details (bottle labels, parallax) can differ from the real room.
+| Clip | Size | Source (Red Dot gallery, `:original`) | Move |
+|---|---|---|---|
+| vid/bar-584 | 1280x584 | the bar, `spots/63/5f9b86b31749b09b43e5ff3283a00b` (1522x694) | a slow truck right along the bar (window 1400→1400 px of 1522) |
+| vid/frites-1080, -720 | 1920x1080, 1280x720 | frites and fried egg, `spots/6b/d7ba0c532947debe063317f74c6696` (2000x1331) | slow push and drift |
+| vid/brunch-1080, -720 | 1920x1080, 1280x720 | eggs Benedict, `spots/79/3e16ef4cef4fe582ae876ba454ba24` (2000x1331) | slow push and drift |
 
-Only one photo of the place itself exists in Red Dot's gallery: the bar (`https://static.spotapps.co/spots/63/5f9b86b31749b09b43e5ff3283a00b/:original`, 1522x694). No photo of the exterior, the sign or Warren Street was found, so none is shown or generated: the film begins inside, on the real bar photo.
+Each clip plays its move forward and back, so the loop has no jump. The bar photo is too small to fill a screen, so it is shown smaller, in a crisp frame. Every reel is capped at its clip width divided by devicePixelRatio, so it is never shown above 1.0x. Build script: /workspace/rd6/kb.py.
 
-| Film | Frames | Made from |
-|---|---|---|
-| frames/hero (top of page) | 150 | Clip 1: a slow truck right along the bar, first frame = left crop of the bar photo, last frame = right crop. Clip 2: a slow push to the BAR sign over the back bar, first frame = that same right crop, last frame = a crop around the BAR sign. The two clips meet on the same real frame. |
-| frames/frites (between Menu and Story) | 61 | Slow push in on the frites and fried-egg plate (gallery `spots/6b/d7ba0c532947debe063317f74c6696`), wide crop to a 1.3x crop. |
-| frames/brunch (between Parties and Reserve) | 61 | Slow push in on eggs Benedict (gallery `spots/79/3e16ef4cef4fe582ae876ba454ba24`), wide crop to a 1.3x crop. |
-
-Rejected clips: a single 10-second bar-to-sign move (the ceiling lamps doubled mid-clip), and a first frites clip (invented steam haze over the egg, exposure swing, fries morphing).
-
-Frame tiers: `x/` 2560x1440, `d/` 1920x1080, `m/` 1080x1440 (a true centre crop of the 2x frame, no resize). Each frame is AVIF at the lowest quality whose SSIM against the lossless master stays at or above 0.97 (0.965 for `x/`), with a quality floor, plus a WebP fallback. A micro WebP ladder (`dt/` 240x135, `mt/` 180x240, every 6th frame, about 3 KB each) loads first for every film once scrolling starts, then light previews (`dq/` 480x270, `mq/` 360x480, every 3rd frame) and sharp frames around where the reader is heading; requests the reader has scrolled past are dropped. The page picks the tier from the canvas size x devicePixelRatio (capped at 2); portrait screens get `m/`. Nothing in `frames/` is requested before the first scroll; films load within 2.5 screens; the canvas always draws the nearest loaded frame over the poster (frame 1). With Save-Data or a 2G connection only the posters show. With reduced motion, JavaScript off, or `?static=1`, the page is the full static page with the real bar photo, no film.
+Design rules for this edition: no gradients, feathered edges, vignettes or blurred fills; sections change with hard-edged masked wipes; headings rise word by word through a line mask; the frites scene cuts the word FRITES out of solid red and scrolling drives through the I. Reduced motion, `?static=1` and JavaScript-off get the static page with stills.
 
 - img/logo-light.png: the Red Dot wordmark with white letters (dot kept red), for dark backgrounds only.
-- Fonts (SIL Open Font License, Google Fonts), self-hosted latin subsets: Fraunces, Instrument Sans, Big Shoulders Display (v1's display face, used on the film hero).
+- Fonts (SIL Open Font License, Google Fonts), self-hosted latin subsets: Fraunces (display) and Instrument Sans (text). Two families only.
 - GSAP 3 + ScrollTrigger, self-hosted in vendor/ (standard GSAP license).
